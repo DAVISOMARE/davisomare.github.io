@@ -1,0 +1,123 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.testimonial-slider {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.testimonial {
+    display: none;
+    padding: 20px;
+    text-align: center;
+}
+
+.testimonial.active {
+    display: block;
+}
+
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.quote {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.author {
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: #555;
+}
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-item {
+    margin: 0 15px;
+    position: relative;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::before, .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.nav-link::before {
+    left: 0;
+}
+
+.nav-link::after {
+    right: 0;
+}
+
+.nav-link:hover {
+    color: #ffa500;
+}
+
+.nav-link:hover::before, .nav-link:hover::after {
+    width: 50%;
+}
